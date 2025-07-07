@@ -75,10 +75,71 @@
     <div id="appModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
         <!-- Modal Box -->
         <div class="bg-white rounded-lg shadow-lg w-[90%] max-w-md p-6 relative">
-            <button id="closeModal"
-                class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
-            <h2 id="modalTitle" class="text-xl font-semibold mb-4">Modal Title</h2>
-            <p id="modalContent" class="text-gray-700">This is modal content.</p>
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+            <form id="eventForm" class="space-y-4">
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">Create New Event</h2>
+                    <label class="block text-sm font-medium text-gray-700">Event Title</label>
+                    <input type="text" id="eventTitle" required
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Date</label>
+                    <input type="date" id="eventDate" required
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Time</label>
+                    <input type="time" id="eventTime"
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea id="eventDesc"
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        rows="3"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Save
+                    Event</button>
+            </form>
+
+            <form id="taskForm" class="space-y-4">
+                <div>
+                    <h2 class="text-xl font-semibold mb-4">Create New Task</h2>
+                    <label class="block text-sm font-medium text-gray-700">Task Title</label>
+                    <input type="text" id="eventTitle" required
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Date</label>
+                    <input type="date" id="eventDate" required
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Time</label>
+                    <input type="time" id="eventTime"
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea id="eventDesc"
+                        class="mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        rows="3"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Save
+                    Task</button>
+            </form>
+
         </div>
     </div>
 

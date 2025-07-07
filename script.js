@@ -41,22 +41,25 @@ function renderCalendar() {
   }
 
   for (let i = 1; i <= daysInMonth; i++) {
-    const div = document.createElement('div');
-    div.textContent = i;
+  const div = document.createElement('div');
+  div.textContent = i;
 
-    let baseClasses = 'p-2 border bg-white hover:bg-blue-100 transition cursor-pointer';
+  let baseClasses = 'p-2 border transition cursor-pointer';
 
-    if (
-      today.year === year &&
-      today.month === month &&
-      i === today.day
-    ) {
-      baseClasses += ' bg-blue-600 text-white font-bold';
-    }
-
-    div.className = baseClasses;
-    datesGrid.appendChild(div);
+  if (
+    today.year === year &&
+    today.month === month &&
+    i === today.day
+  ) {
+    console.log('highlighting the exact date', i);
+    baseClasses += ' bg-blue-600 text-white font-bold';
+  } else {
+    baseClasses += ' bg-white hover:bg-blue-100';
   }
+
+  div.className = baseClasses;
+  datesGrid.appendChild(div);
+}
 
   const totalCells = firstDay + daysInMonth;
   const remaining = 42 - totalCells;
