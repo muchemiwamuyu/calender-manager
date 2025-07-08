@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
-    fetch('https://callivent-backend.onrender.com/auth/status', 
-        {
-            credentials: "include"
-        }
-    ).then(res => {
+    fetch('https://callivent-backend.onrender.com/auth/status', {
+
+        credentials: 'include'
+    })
+    .then(res => {
         if(!res.ok) {
             // if user not logged in to redirect to google login
             window.location.href = 'https://callivent-backend.onrender.com/auth/google'
@@ -21,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 accountCircle.textContent = data.user.name.charAt(0).toUpperCase();
                 accountCircle.title = data.user.name // to see full details  
             }
-            window.location.href = 'https://muchemiwamuyu.github.io/calender-manager/'
         }
     })
     .catch(error => {
