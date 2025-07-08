@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:5000/auth/status', 
+    fetch('https://callivent-backend.onrender.com/auth/status', 
         {
             credentials: "include"
         }
